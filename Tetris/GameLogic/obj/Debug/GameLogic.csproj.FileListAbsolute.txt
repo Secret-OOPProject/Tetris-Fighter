@@ -1,0 +1,15 @@
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\Petr\Desktop\Tetris\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\Petr\Desktop\Tetris\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\Petr\Desktop\Tetris\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Desktop\Tetris\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\Petr\Desktop\Tetris\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\User\Downloads\Tetris\Tetris\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\User\Downloads\Tetris\Tetris\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.pdb

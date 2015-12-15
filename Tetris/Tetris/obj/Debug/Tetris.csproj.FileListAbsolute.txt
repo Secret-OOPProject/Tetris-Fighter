@@ -1,0 +1,48 @@
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.exe
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\MainWindow.baml
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\App.g.cs
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.g.resources
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
+c:\users\petr\documents\visual studio 2012\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Debug\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Debug\GameLogic.pdb
+C:\Users\Petr\Desktop\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\Petr\Desktop\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\Petr\Desktop\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\Petr\Desktop\Tetris\Tetris\bin\Debug\GameLogic.dll
+C:\Users\Petr\Desktop\Tetris\Tetris\bin\Debug\GameLogic.pdb
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\MainWindow.baml
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\App.g.cs
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.g.resources
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\Petr\Desktop\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\bin\Debug\GameLogic.dll
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\bin\Debug\GameLogic.pdb
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\MainWindow.baml
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\App.g.cs
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.g.resources
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.pdb

@@ -1,0 +1,15 @@
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Release\Tetris.exe.config
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Release\Tetris.exe
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Release\Tetris.pdb
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Release\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\bin\Release\GameLogic.pdb
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\MainWindow.baml
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\MainWindow.g.cs
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\App.g.cs
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris_MarkupCompile.cache
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.g.resources
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.Properties.Resources.resources
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.csproj.GenerateResource.Cache
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.exe
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\Tetris\obj\Release\Tetris.pdb

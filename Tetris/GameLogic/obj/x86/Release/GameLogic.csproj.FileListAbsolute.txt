@@ -1,0 +1,5 @@
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\bin\x86\Release\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\bin\x86\Release\GameLogic.pdb
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\x86\Release\GameLogic.csprojResolveAssemblyReference.cache
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\x86\Release\GameLogic.dll
+C:\Users\Petr\Documents\Visual Studio 2012\Projects\Tetris\GameLogic\obj\x86\Release\GameLogic.pdb
