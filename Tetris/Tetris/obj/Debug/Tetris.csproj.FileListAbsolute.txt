@@ -46,3 +46,15 @@ C:\Users\User\Downloads\Tetris\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateRes
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\Tetris.exe.config
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.exe
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\GameLogic.dll
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\bin\Debug\GameLogic.pdb
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\MainWindow.baml
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\MainWindow.g.cs
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\App.g.cs
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.cache
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.g.resources
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache

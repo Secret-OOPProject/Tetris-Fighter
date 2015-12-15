@@ -15,7 +15,7 @@
             </StackPanel>
 
             <DockPanel DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Grid  DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Name="mainGrid" ShowGridLines="False" Background="Gray"  >
+                <Grid  DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="P1Grid" ShowGridLines="False" Background="Gray"  >
 
                 </Grid>
             </DockPanel>
@@ -29,51 +29,45 @@
                 <RowDefinition Height="35"/>
             </Grid.RowDefinitions>
             <StackPanel  VerticalAlignment="Stretch" HorizontalAlignment="Right" Width="100">
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type TextBlock}">
-                    <!-- Šablona -->
-                    <Setter Property="FontSize">
-                        <Setter.Value>20</Setter.Value>
-                    </Setter>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                </Style>
-            </StackPanel.Resources>
-             <Grid  Width="100" Height="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ShowGridLines="False" Name="gridNext" Background="Gray">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <!-- Šablona -->
+                        <Setter Property="FontSize">
+                            <Setter.Value>20</Setter.Value>
+                        </Setter>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Grid  Width="100" Height="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ShowGridLines="False" Name="gridNext" Background="Gray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-            </Grid>
-            <TextBlock HorizontalAlignment="Center">Score</TextBlock>
-            <Border BorderBrush="Black" BorderThickness="2">
-                <Grid   >
-                       
-                    <TextBlock Name="txtScore" HorizontalAlignment="Center">0</TextBlock>
-                    </Grid>
-            </Border>
-            <TextBlock HorizontalAlignment="Center">Level</TextBlock>
-            <Border BorderBrush="Black" BorderThickness="2">
-                <Grid   >
-                    <TextBlock Name="txtLevel" HorizontalAlignment="Center" VerticalAlignment="Stretch">1</TextBlock>
                 </Grid>
-            </Border>
-                
+                <TextBlock HorizontalAlignment="Center">Score</TextBlock>
+                <Border BorderBrush="Black" BorderThickness="2">
+                    <Grid   >
+
+                        <TextBlock Name="txtScore" HorizontalAlignment="Center">0</TextBlock>
+                    </Grid>
+                </Border>
 
 
-        </StackPanel>
-            <Button Focusable="False" Grid.Row="3" Click="Button_Click">About ...</Button>
+
+            </StackPanel>
             <Button Focusable="False" Name="btnPause" Content="Pause" Grid.Row="2" Click="btnPause_Click"></Button>
             <Button Grid.Row="1" Name="btnNewGame" Click="btnNewGame_Click"  FontWeight="Bold" FontSize="16" Focusable="False">New game</Button>
         </Grid>
-        
+        <WindowsFormsHost HorizontalAlignment="Left" Height="100" Margin="112,-105,0,0" VerticalAlignment="Top" Width="100"/>
+
     </Grid>
 </Window>

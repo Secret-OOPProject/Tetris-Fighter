@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Tetris
 {
@@ -36,7 +37,7 @@ namespace Tetris
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Title = Assembly.GetExecutingAssembly().GetName().Name.ToString() + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            CreateMainGrid();
+            CreateGrid();
             NewGame();
         }
 
@@ -95,7 +96,6 @@ namespace Tetris
         private void NewGame()
         {
             //txtLabel.Text = "";
-            txtLevel.Text = "0";
             txtScore.Text = "0";
             gm = null;
             gm = new GameManager();
@@ -108,20 +108,20 @@ namespace Tetris
         {
             this.Dispatcher.Invoke((Action)(() =>
             {
-                KeyDownMethod(Key.Down);
+                KeyDownMethod(Key.S);
             }));
         }
 
-        private void CreateMainGrid()
+        private void CreateGrid()
         {
             for (int i = 0; i < GameManager.Columns; i++)
             {
-                mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
+                P1Grid.ColumnDefinitions.Add(new ColumnDefinition());
             }
 
             for (int i = 0; i < GameManager.Rows; i++)
             {
-                mainGrid.RowDefinitions.Add(new RowDefinition());
+                P1Grid.RowDefinitions.Add(new RowDefinition());
             }
 
 
@@ -138,7 +138,7 @@ namespace Tetris
                     rec.Fill = new SolidColorBrush(Colors.White);
                     Grid.SetColumn(rec, i);
                     Grid.SetRow(rec, j);
-                    mainGrid.Children.Add(rec);
+                    P1Grid.Children.Add(rec);
 
                     listOfRectangles[j].Add(rec);
                 }
@@ -202,11 +202,10 @@ namespace Tetris
                     }
                 case Key.Space:
                     {
-
+                        break;
                     }
             }
             AllDraw();
-            txtLevel.Text = gm.Level.ToString();
             txtScore.Text = gm.Score.ToString();
             //  if (gm.IsEndOfGame) txtLabel.Text = "KONEC HRY";
         }
@@ -223,20 +222,21 @@ namespace Tetris
             gm.EndRunningGame();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            gm.IsPaused = true;
-            MessageBox.Show(" Created by Petr Domes \n (petrds@centrum.cz) \n 2013 \n \n <- move left \n -> move right \n  ^  rotate \n  v   move down", Assembly.GetExecutingAssembly().GetName().Name.ToString() + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString(), MessageBoxButton.OK, MessageBoxImage.None);
-            gm.IsPaused = false;
-        }
-
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
-            mainGrid.Focus();
-            if (gm.IsPaused) gm.IsPaused = false;
-            else gm.IsPaused = true;
-        }
+            P1Grid.Focus();
+            if (gm.IsPaused)
+            {
+                gm.IsPaused = false;
+                btnPause.Content = "Pause";
+            }
+            else
+            {
+                gm.IsPaused = true;
+                btnPause.Content = "Resume";
+            }
 
-        #endregion
+            #endregion
+        }
     }
 }

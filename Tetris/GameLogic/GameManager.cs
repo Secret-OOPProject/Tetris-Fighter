@@ -17,7 +17,6 @@ namespace GameLogic
         private bool isEndOfGame = false;
         private Thread th;
         private Random ran = new Random();
-        private int level = 0;
         private int score = 0;
         private int timeOut = 1000;
 
@@ -26,7 +25,6 @@ namespace GameLogic
         public static int Rows { get { return 20; } }
         public BaseShapeObject MovingObject { get { return (BaseShapeObject)movingObject; } }
         public BaseShapeObject NextMovingObject { get { return (BaseShapeObject)nextMovingObject; } }
-        public int Level { get { return level; } }
         public int Score { get { return score; } }
         public bool IsEndOfGame { get { return isEndOfGame; } }
         public bool IsPaused { get; set; }
@@ -148,39 +146,22 @@ namespace GameLogic
                 switch (delRows)
                 {
                     case 1:
-                        score += delRows * 40 + 40;
+                        score += delRows * 1;
                         break;
                     case 2:
-                        score += delRows * 100 + 100;
+                        score += delRows * 2;
                         break;
                     case 3:
-                        score += delRows * 300 + 300;
+                        score += delRows * 3;
                         break;
                     case 4:
-                        score += delRows * 1200 + 1200;
+                        score += delRows * 4;
                         break;
                 }
-                if (score >= ((level + 1) * 3000) * 3 / 2) NewLevel();
 
             }
 
-            /*
-Počet odbouraných řad	Vzorec
-Jedna	n*40 + 40
-Dvě	n*100 + 100
-Tři	n*300 + 300
-Čtyři (tetris)	n*1200 + 1200
-              * */
-        }
-
-        private void NewLevel()
-        {
-            level++;
-            //    listOfAllPoints.Clear();
-            //    movingObject = null;
-            AddNewObject();
-            timeOut = (int)(timeOut * 0.8F);
-
+            
         }
 
 

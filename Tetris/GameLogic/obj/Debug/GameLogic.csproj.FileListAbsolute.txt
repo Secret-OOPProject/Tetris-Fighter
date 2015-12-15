@@ -13,3 +13,8 @@ C:\Users\User\Downloads\Tetris\Tetris\GameLogic\bin\Debug\GameLogic.pdb
 C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
 C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.dll
 C:\Users\User\Downloads\Tetris\Tetris\GameLogic\obj\Debug\GameLogic.pdb
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\GameLogic\bin\Debug\GameLogic.dll
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\GameLogic\bin\Debug\GameLogic.pdb
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\GameLogic\obj\Debug\GameLogic.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\GameLogic\obj\Debug\GameLogic.dll
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\GameLogic\obj\Debug\GameLogic.pdb
