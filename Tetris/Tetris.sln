@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tetris", "Tetris\Tetris.csproj", "{A27BADB3-5218-41E6-BE95-4D25B3491266}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tetris-Fighter", "Tetris\Tetris-Fighter.csproj", "{A27BADB3-5218-41E6-BE95-4D25B3491266}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "GameLogic\GameLogic.csproj", "{E3AA3D2D-7F4C-4665-80C1-BBA65E452CA5}"
 EndProject

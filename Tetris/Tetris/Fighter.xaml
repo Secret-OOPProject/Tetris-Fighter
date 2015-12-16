@@ -12,9 +12,16 @@
         <Canvas Grid.ColumnSpan="1" Width="594" Height="527">
             <Image x:Name="BG" Source="res/bg.png" Stretch="Fill" Height="527" Width="594"/>
             <Image x:Name="Stage" Source="res/road1.png" Stretch="Fill" Height="527" Width="594"/>
-            <Image x:Name="Player1" Height="150" Canvas.Left="82" Canvas.Top="308" Source="res/1.png"/>
-            <Image x:Name="Player2" Height="150" Canvas.Left="388" Canvas.Top="308" Width="130" Source="res/bot1.png"/>
+            <Image x:Name="Player" Height="150" Canvas.Left="82" Canvas.Top="308" Source="res/1.png"/>
+            <Image x:Name="Enemy" Height="150" Canvas.Left="395" Canvas.Top="308" Width="130" Source="res/bot1.png"/>
+            <Label x:Name="PlayerName" Content="Warrior of Light" Canvas.Left="10" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <ProgressBar x:Name="PlayerHP" Height="20" Canvas.Left="10" Canvas.Top="38" Width="189" Value="101"/>
+            <Label x:Name="PlayerHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="10" Canvas.Top="32" Width="189"/>
+            <Label x:Name="EnemyName" Content="Lv. 0 Dragon" Canvas.Left="479" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <ProgressBar x:Name="EnemyHP" Height="20" Canvas.Left="395" Canvas.Top="38" Width="189" Maximum="30" Value="31" Background="White" Foreground="Red"/>
+            <Label x:Name="EnemyHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="395" Canvas.Top="32" Width="188" FlowDirection="RightToLeft"/>
         </Canvas>
+
 
     </Grid>
 </Page>

@@ -21,6 +21,14 @@ namespace Tetris
     /// </summary>
     public partial class Fighter : Page
     {
+
+        private int dragonLV;
+        public int DragonLV
+        {
+            get { return dragonLV; }
+            set { dragonLV = value; }
+        }
+
         public Fighter()
         {
             InitializeComponent();
@@ -28,6 +36,9 @@ namespace Tetris
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Player2
+            PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+            EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
             DispatcherTimer timer = new DispatcherTimer();
             timer.Tick += new EventHandler(DispatTick);
             timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
