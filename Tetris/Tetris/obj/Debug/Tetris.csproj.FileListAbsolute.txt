@@ -58,3 +58,6 @@ C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris_MarkupC
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.g.resources
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
 C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Fighter.g.cs
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Tetris_MarkupCompile.lref
+C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\obj\Debug\Fighter.baml

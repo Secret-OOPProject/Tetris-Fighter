@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace GameLogic
 {
@@ -19,6 +20,7 @@ namespace GameLogic
         private Random ran = new Random();
         private int score = 0;
         private int timeOut = 1000;
+        private int counter;
 
 
         public static int Columns { get { return 10; } }
@@ -28,6 +30,11 @@ namespace GameLogic
         public int Score { get { return score; } }
         public bool IsEndOfGame { get { return isEndOfGame; } }
         public bool IsPaused { get; set; }
+        public int Counter {
+            get { return counter; }
+            set { counter = value; }
+        }
+        public DispatcherTimer timer = new DispatcherTimer();
 
         public delegate void MoveDownByThHandler();
         public event MoveDownByThHandler MoveDownByThread;
@@ -42,6 +49,27 @@ namespace GameLogic
             th = new Thread(MoveDownByTh);
             th.IsBackground = false;
             th.Start();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = new TimeSpan(0, 0, 1); // 1 second
+            timer.Start();
+        }
+
+        
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (Counter != 0) Counter--;
+            else
+            {
+                timer.Stop();
+                TurnEnd();
+            }
+            
+        }
+
+        private void TurnEnd()
+        {
+            ShowGameOver();
         }
 
         private void MoveDownByTh()
@@ -146,16 +174,16 @@ namespace GameLogic
                 switch (delRows)
                 {
                     case 1:
-                        score += delRows * 1;
+                        score += delRows;
                         break;
                     case 2:
-                        score += delRows * 2;
+                        score += delRows * 3/2;
                         break;
                     case 3:
-                        score += delRows * 3;
+                        score += delRows * 2;
                         break;
                     case 4:
-                        score += delRows * 4;
+                        score += delRows * 5/2;
                         break;
                 }
 
@@ -226,7 +254,7 @@ namespace GameLogic
         /// <summary>
         /// vytvori napis game over v hraci plose
         /// </summary>
-        private void ShowGameOver()
+        public void ShowGameOver()
         {
             ObjectGO ogo = new ObjectGO();
             ogo.Create(Columns / 2, 0);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -99,6 +100,7 @@ namespace Tetris
             txtScore.Text = "0";
             gm = null;
             gm = new GameManager();
+            gm.Counter = 60;
             gm.Start();
             AllDraw();
             gm.MoveDownByThread += gm_MoveDownByThread;
@@ -207,9 +209,9 @@ namespace Tetris
             }
             AllDraw();
             txtScore.Text = gm.Score.ToString();
-            //  if (gm.IsEndOfGame) txtLabel.Text = "KONEC HRY";
+            txtTimer.Text = gm.Counter.ToString();
+            if (gm.IsEndOfGame) MessageBox.Show("Turn End!!!");
         }
-
 
         private void btnNewGame_Click(object sender, RoutedEventArgs e)
         {
@@ -229,14 +231,17 @@ namespace Tetris
             {
                 gm.IsPaused = false;
                 btnPause.Content = "Pause";
+                gm.timer.Start();
             }
             else
             {
                 gm.IsPaused = true;
                 btnPause.Content = "Resume";
+                gm.timer.Stop();
             }
 
             #endregion
         }
+
     }
 }
