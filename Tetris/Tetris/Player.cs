@@ -9,7 +9,7 @@ namespace Tetris
     class Player
     {
         private double maxHP;
-        private double damage;
+        private int damage;
 
         public double MaxHP
         {
@@ -17,13 +17,13 @@ namespace Tetris
             set { maxHP = value; }
         }
 
-        public double Damage
+        public int Damage
         {
             get { return damage; }
             set { damage = value; }
         }
 
-        public Player(double hp, double dam = 0)
+        public Player(double hp, int dam = 0)
         {
             MaxHP = hp;
             Damage = dam;

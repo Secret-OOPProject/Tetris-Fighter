@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Media;
 
 namespace Tetris
 {
@@ -29,6 +30,8 @@ namespace Tetris
         private List<List<Rectangle>> listOfRectangles = new List<List<Rectangle>>(GameManager.Columns);
         private List<List<Rectangle>> listOfNextRectangles = new List<List<Rectangle>>(4);
         private GameManager gm;
+        private SoundPlayer BGM = new SoundPlayer(@"C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\res\Those Who Fight Further - SSH Version.wav");
+        private SoundPlayer GGWP = new SoundPlayer(@"C:\Users\User\Source\Repos\Tetris-Fighter\Tetris\Tetris\res\Tetris.wav");
 
         static Random r = new Random();
         private Player me = new Player(100);
@@ -56,8 +59,14 @@ namespace Tetris
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            GGWP.PlayLooping();
+        }
+
+        private void Start()
+        {
+            BGM.PlayLooping();
             PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
-            EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
+            EnemyHPValue.Content = string.Format("{0}/{1}", (int)EnemyHP.Value, (int)EnemyHP.Maximum);
             DispatcherTimer timer = new DispatcherTimer();
             timer.Tick += new EventHandler(DispatTick);
             timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
@@ -100,6 +109,7 @@ namespace Tetris
             if(!gm.IsPuzzle)
             {
                 Deal();
+                Thread.Sleep(2000);
                 gm.IsPuzzle = true;
                 NewGame();
             }
@@ -163,7 +173,7 @@ namespace Tetris
             txtScore.Text = "0";
             gm = null;
             gm = new GameManager();
-            gm.Counter = 5;
+            gm.Counter = 60;
             gm.Start();
             AllDraw();
             gm.MoveDownByThread += gm_MoveDownByThread;
@@ -271,12 +281,6 @@ namespace Tetris
                         gm.Rotate();
                         break;
                     }
-                case Key.Space:
-                    {
-                        Deal();
-                        break;
-                    }
-
             }
             AllDraw();
             txtScore.Text = gm.Score.ToString();
@@ -285,28 +289,70 @@ namespace Tetris
 
         public void Deal()
         {
+            me.setDamage(gm.Score);
             Dragon.setDamage(r.Next(enemyDamageLength[0], enemyDamageLength[1]));
             if (me.Damage > Dragon.Damage)
             {
                 EnemyHP.Value -= me.Damage;
                 EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
-                PlayerHP.Value -= Dragon.Damage;
-                PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+                if (EnemyHP.Value == 0)
+                {
+                    Thread.Sleep(1000);
+                    Win();
+                }
+                else
+                {
+                    PlayerHP.Value -= Dragon.Damage;
+                    PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+                }
+                
             }
+
+
 
             else
             {
                 PlayerHP.Value -= Dragon.Damage;
                 PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
-                EnemyHP.Value -= me.Damage;
-                EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
-            }
+                if (PlayerHP.Value == 0)
+                {
+                    Thread.Sleep(1000);
+                    Lose();
+                }
+                else
+                {
+                    EnemyHP.Value -= me.Damage;
+                    EnemyHPValue.Content = string.Format("{0}/{1}", (int)EnemyHP.Value, (int)EnemyHP.Maximum);
+                }
+                    
+                }
+            gm.MoveDownByThread -= gm_MoveDownByThread;
+        }
+
+        private void Lose()
+        {
+            MessageBox.Show("Lose!!!");
+            MessageBox.Show("You Die at Level {0}",Convert.ToString(DragonLV));
+            MainWindow main = new MainWindow();
+        }
+
+        private void Win()
+        {
+            MessageBox.Show("Win!!!");
+            PlayerHP.Value = 100;
+            DragonLV++;
+            Dragon = new Player((30 * Math.Pow(1.5, DragonLV)), r.Next(enemyDamageLength[0] * (int)Math.Pow(1.5, DragonLV), enemyDamageLength[1] * (int)Math.Pow(1.5, DragonLV)));
+            EnemyHP.Maximum = Dragon.MaxHP;
+            EnemyHP.Value = Dragon.MaxHP;
+            EnemyHPValue.Content = string.Format("{0}/{1}", (int)EnemyHP.Value, (int)EnemyHP.Maximum);
+            EnemyName.Content = string.Format("Lv. {0} Dragon", DragonLV+1);
+            NewGame();
         }
 
         private void btnNewGame_Click(object sender, RoutedEventArgs e)
         {
             gm.EndRunningGame();
-            NewGame();
+            Start();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -331,5 +377,13 @@ namespace Tetris
             }
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Visibility = Visibility.Hidden;
+            start.Visibility = Visibility.Hidden;
+            image.Visibility = Visibility.Hidden;
+            GGWP.Stop();
+            Start();
+        }
     }
 }

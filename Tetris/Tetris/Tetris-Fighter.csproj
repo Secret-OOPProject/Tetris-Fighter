@@ -139,6 +139,14 @@
     <Resource Include="res\next4.png" />
     <Resource Include="res\road1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\go1.png" />
+    <Resource Include="res\go2.png" />
+    <Content Include="res\Tetris.wav" />
+    <Resource Include="res\logo.png" />
+    <Resource Include="res\logo2.jpg" />
+    <Content Include="res\Those Who Fight Further - SSH Version.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

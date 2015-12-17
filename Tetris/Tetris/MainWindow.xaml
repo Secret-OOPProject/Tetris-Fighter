@@ -7,9 +7,9 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="105"/>
+            <ColumnDefinition Width="126"/>
         </Grid.ColumnDefinitions>
-        <DockPanel   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <DockPanel   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,5,0" >
             <StackPanel Margin="0,2,2,2" DockPanel.Dock="Top" Orientation="Horizontal">
                 <!--TextBlock Name="txtLabel" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock-->
             </StackPanel>
@@ -75,19 +75,22 @@
 
             </StackPanel>
             <Button Focusable="False" Name="btnPause" Content="Pause" Grid.Row="2" Click="btnPause_Click"></Button>
-            <Button Grid.Row="1" Name="btnNewGame" Click="btnNewGame_Click"  FontWeight="Bold" FontSize="16" Focusable="False">New game</Button>
+            <Button Grid.Row="1" Name="btnNewGame" Click="btnNewGame_Click"  FontWeight="Bold" FontSize="16" Focusable="False" Visibility="Hidden">New game</Button>
         </Grid>
-        <Canvas Width="594" Height="527" Margin="-599,2,256,0">
+        <Canvas Margin="-599,2,247,0">
             <Image x:Name="BG" Source="res/bg.png" Stretch="Fill" Height="527" Width="594"/>
             <Image x:Name="Player" Height="150" Canvas.Left="82" Canvas.Top="308" Source="res/1.png"/>
             <Image x:Name="Enemy" Height="150" Canvas.Left="395" Canvas.Top="308" Width="130" Source="res/bot1.png"/>
             <Label x:Name="PlayerName" Content="Warrior of Light" Canvas.Left="10" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
             <ProgressBar x:Name="PlayerHP" Height="20" Canvas.Left="10" Canvas.Top="38" Width="189" Value="101" IsEnabled="False"/>
             <Label x:Name="PlayerHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="10" Canvas.Top="32" Width="189"/>
-            <Label x:Name="EnemyName" Content="Lv. 0 Dragon" Canvas.Left="479" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <Label x:Name="EnemyName" Content="Lv. 1 Dragon" Canvas.Left="479" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
             <ProgressBar x:Name="EnemyHP" Height="20" Canvas.Left="395" Canvas.Top="38" Width="189" Maximum="30" Value="31" Background="White" Foreground="Red"/>
             <Label x:Name="EnemyHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="395" Canvas.Top="32" Width="188" FlowDirection="RightToLeft"/>
         </Canvas>
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="527" Margin="-599,2,0,0" VerticalAlignment="Top" Width="955" Grid.ColumnSpan="2" Background="Black"/>
+        <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Height="84" Margin="-256,396,0,0" VerticalAlignment="Top" Width="296" FontSize="32" Click="button_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="243" Margin="-316,43,0,0" VerticalAlignment="Top" Width="426" Source="res/logo.png"/>
 
     </Grid>
 </Window>

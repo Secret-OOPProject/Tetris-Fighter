@@ -19,7 +19,7 @@ namespace GameLogic
         private bool isPuzzle = true;
         private Thread th;
         private Random ran = new Random();
-        private int score = 5;
+        private int score = 0;
         private int timeOut = 1000;
         private int counter;
 
