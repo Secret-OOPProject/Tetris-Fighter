@@ -16,9 +16,10 @@ namespace GameLogic
         private IObject movingObject;
         private IObject nextMovingObject;
         private bool isEndOfGame = false;
+        private bool isPuzzle = true;
         private Thread th;
         private Random ran = new Random();
-        private int score = 0;
+        private int score = 5;
         private int timeOut = 1000;
         private int counter;
 
@@ -29,6 +30,11 @@ namespace GameLogic
         public BaseShapeObject NextMovingObject { get { return (BaseShapeObject)nextMovingObject; } }
         public int Score { get { return score; } }
         public bool IsEndOfGame { get { return isEndOfGame; } }
+        public bool IsPuzzle
+        {
+            get { return isPuzzle; }
+            set { isPuzzle = value; }
+        }
         public bool IsPaused { get; set; }
         public int Counter {
             get { return counter; }
@@ -67,9 +73,9 @@ namespace GameLogic
             
         }
 
-        private void TurnEnd()
+        public void TurnEnd()
         {
-            ShowGameOver();
+            isPuzzle = false;
         }
 
         private void MoveDownByTh()

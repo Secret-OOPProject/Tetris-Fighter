@@ -24,10 +24,29 @@ namespace Tetris
     /// </summary>
     public partial class MainWindow : Window
     {
+        int AniState = 1;
         private Rectangle rec = new Rectangle();
         private List<List<Rectangle>> listOfRectangles = new List<List<Rectangle>>(GameManager.Columns);
         private List<List<Rectangle>> listOfNextRectangles = new List<List<Rectangle>>(4);
         private GameManager gm;
+
+        static Random r = new Random();
+        private Player me = new Player(100);
+        private Player Dragon = new Player(30);
+
+        public int[] enemyDamageLength = { 1, 10 };
+        private double dragonLV = 0;
+
+        public int[] EnemyDamageLength
+        {
+            get { return enemyDamageLength; }
+            set { enemyDamageLength = value; }
+        }
+        public double DragonLV
+        {
+            get { return dragonLV; }
+            set { dragonLV = value; }
+        }
 
         public MainWindow()
         {
@@ -37,9 +56,53 @@ namespace Tetris
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+            EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(DispatTick);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            timer.Start();
             Title = Assembly.GetExecutingAssembly().GetName().Name.ToString() + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             CreateGrid();
             NewGame();
+        }
+
+        private void DispatTick(object sender, EventArgs e)
+        {
+            if (AniState == 1)
+            {
+                Player.Source = new BitmapImage(new Uri(@"\res\2.png", UriKind.Relative));
+                Enemy.Source = new BitmapImage(new Uri(@"\res\bot2.png", UriKind.Relative));
+                AniState = 2;
+            }
+
+            else if (AniState == 2)
+            {
+                Player.Source = new BitmapImage(new Uri(@"\res\3.png", UriKind.Relative));
+                Enemy.Source = new BitmapImage(new Uri(@"\res\bot3.png", UriKind.Relative));
+                AniState = 3;
+            }
+
+            else if (AniState == 3)
+            {
+                Player.Source = new BitmapImage(new Uri(@"\res\4.png", UriKind.Relative));
+                Enemy.Source = new BitmapImage(new Uri(@"\res\bot4.png", UriKind.Relative));
+                AniState = 4;
+            }
+
+            else if (AniState == 4)
+            {
+                Player.Source = new BitmapImage(new Uri(@"\res\1.png", UriKind.Relative));
+                Enemy.Source = new BitmapImage(new Uri(@"\res\bot1.png", UriKind.Relative));
+                AniState = 1;
+            }
+
+            if(!gm.IsPuzzle)
+            {
+                Deal();
+                gm.IsPuzzle = true;
+                NewGame();
+            }
         }
 
         private void AllDraw()
@@ -100,7 +163,7 @@ namespace Tetris
             txtScore.Text = "0";
             gm = null;
             gm = new GameManager();
-            gm.Counter = 60;
+            gm.Counter = 5;
             gm.Start();
             AllDraw();
             gm.MoveDownByThread += gm_MoveDownByThread;
@@ -166,7 +229,6 @@ namespace Tetris
 
         }
 
-        #region tlacitka
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -180,6 +242,13 @@ namespace Tetris
                 //AllDraw();
                 return;
             }
+
+            else if (!gm.IsPuzzle)
+            {
+                gm.EndRunningGame();
+                me.setDamage(gm.Score);
+            }
+
             switch (key)
             {
                 case Key.A:
@@ -204,14 +273,34 @@ namespace Tetris
                     }
                 case Key.Space:
                     {
-                        
+                        Deal();
                         break;
                     }
+
             }
             AllDraw();
             txtScore.Text = gm.Score.ToString();
             txtTimer.Text = gm.Counter.ToString();
-            if (gm.IsEndOfGame) MessageBox.Show("Turn End!!!");
+        }
+
+        public void Deal()
+        {
+            Dragon.setDamage(r.Next(enemyDamageLength[0], enemyDamageLength[1]));
+            if (me.Damage > Dragon.Damage)
+            {
+                EnemyHP.Value -= me.Damage;
+                EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
+                PlayerHP.Value -= Dragon.Damage;
+                PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+            }
+
+            else
+            {
+                PlayerHP.Value -= Dragon.Damage;
+                PlayerHPValue.Content = string.Format("{0}/{1}", PlayerHP.Value, PlayerHP.Maximum);
+                EnemyHP.Value -= me.Damage;
+                EnemyHPValue.Content = string.Format("{0}/{1}", EnemyHP.Value, EnemyHP.Maximum);
+            }
         }
 
         private void btnNewGame_Click(object sender, RoutedEventArgs e)
@@ -240,8 +329,6 @@ namespace Tetris
                 btnPause.Content = "Resume";
                 gm.timer.Stop();
             }
-
-            #endregion
         }
 
     }

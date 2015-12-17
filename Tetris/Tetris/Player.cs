@@ -8,25 +8,30 @@ namespace Tetris
 {
     class Player
     {
-        private int hp;
-        private int damage;
+        private double maxHP;
+        private double damage;
 
-        public int HP
+        public double MaxHP
         {
-            get { return hp; }
-            set { hp = value; }
+            get { return maxHP; }
+            set { maxHP = value; }
         }
 
-        public int Damage
+        public double Damage
         {
             get { return damage; }
             set { damage = value; }
         }
 
-        public Player(int hp, int dam)
+        public Player(double hp, double dam = 0)
         {
-            HP = hp;
+            MaxHP = hp;
             Damage = dam;
+        }
+
+        public void setDamage(int score)
+        {
+            damage = score;
         }
     }
 }

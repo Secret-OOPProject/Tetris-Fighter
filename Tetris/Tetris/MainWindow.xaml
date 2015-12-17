@@ -77,7 +77,17 @@
             <Button Focusable="False" Name="btnPause" Content="Pause" Grid.Row="2" Click="btnPause_Click"></Button>
             <Button Grid.Row="1" Name="btnNewGame" Click="btnNewGame_Click"  FontWeight="Bold" FontSize="16" Focusable="False">New game</Button>
         </Grid>
-        <Frame x:Name="frame" Content="Frame" Margin="-599,2,256,0" Source="/Tetris;component/Fighter.xaml"/>
+        <Canvas Width="594" Height="527" Margin="-599,2,256,0">
+            <Image x:Name="BG" Source="res/bg.png" Stretch="Fill" Height="527" Width="594"/>
+            <Image x:Name="Player" Height="150" Canvas.Left="82" Canvas.Top="308" Source="res/1.png"/>
+            <Image x:Name="Enemy" Height="150" Canvas.Left="395" Canvas.Top="308" Width="130" Source="res/bot1.png"/>
+            <Label x:Name="PlayerName" Content="Warrior of Light" Canvas.Left="10" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <ProgressBar x:Name="PlayerHP" Height="20" Canvas.Left="10" Canvas.Top="38" Width="189" Value="101" IsEnabled="False"/>
+            <Label x:Name="PlayerHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="10" Canvas.Top="32" Width="189"/>
+            <Label x:Name="EnemyName" Content="Lv. 0 Dragon" Canvas.Left="479" Canvas.Top="10" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+            <ProgressBar x:Name="EnemyHP" Height="20" Canvas.Left="395" Canvas.Top="38" Width="189" Maximum="30" Value="31" Background="White" Foreground="Red"/>
+            <Label x:Name="EnemyHPValue" Content="" VerticalAlignment="Bottom" Canvas.Left="395" Canvas.Top="32" Width="188" FlowDirection="RightToLeft"/>
+        </Canvas>
 
     </Grid>
 </Window>
